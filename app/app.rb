@@ -35,8 +35,14 @@ class Tdc < Padrino::Application
   layout :photography
   
   get :index do
-    @posts = []#Photos.all(:order => 'created_at desc')
+    @main_image = Photo.default
+    @photos = Photo.all.collect{|photo|photo}.sort_by{ rand }
     render 'index'
+  end
+  
+  get 'load_image' do
+    photo = Photo.where(:thumbnail => params[:thumbnail]).first
+    render :url => photo.large, :title => photo.title
   end
   
 end

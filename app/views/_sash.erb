@@ -1,3 +1,16 @@
 <div id="sash">
-  
+	<% @photos.each do | photo | %>
+		<%= image_tag( photo.thumbnail, :class => "thumbnail" )%>
+	<% end %>
+</div>
+
+<%= image_tag( image_path("flourish.png"), :id => "flourish" ) %>
+
+<h2 id="contact"><a href="mailto:the.jaba@gmail.com">Contact</a></h2>
+
+<div id="logo">
+	<h1>
+		<div id="logo-top">TDC</div>
+		<div id="logo-bottom">Photography</div>
+	</h1>
 </div>

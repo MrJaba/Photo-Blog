@@ -1,12 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
   <head>
     <%= stylesheet_link_tag :tdc %>
+		<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js', 'thumbnails' %>
     <title>TDC Photography</title>
   </head>
   <body>
     <div id="content">
       <%= yield %>
       <%= partial 'sash' %>
+			<%= image_tag( image_path('spinner.gif'), :class => "hidden", :id => "spinner" )%>
     </div>    
   </body>
 </html>

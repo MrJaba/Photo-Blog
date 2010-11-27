@@ -16,6 +16,7 @@ gem 'padrino', "0.9.19"
 
 gem "mongo"
 gem "bson_ext"
-gem "mongoid"
+gem "mongoid", "2.0.0.beta.20"
 gem "flickraw"
+gem "whenever"
 

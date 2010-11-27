@@ -1,12 +1,91 @@
 body{
 	background:black;
+	padding:10px;
+	color:#939393;
+}
+
+#main_image{
+	position:absolute;
+	width:auto;
+	height:95%;
 }
 
 div#sash{
 	position:absolute;
-	bottom:10%;
+	bottom:8%;
 	height:80px;
-	width:100%;
-	border-top: 1px solid red;
-	border-bottom: 1px solid red;
+	width:90%;
+	border-top: 1px solid #464646;
+	border-bottom: 1px solid #464646;
+	background: black;	
+	padding-left:2px;
+	overflow:hidden;
+}
+
+.thumbnail{
+	margin-top:3px;
+}
+
+#flourish{
+	position:absolute;
+	bottom:240px;
+	width:200px;
+	right:20px;
+}
+
+#contact{
+	position:absolute;
+	bottom:180px;
+	height:30px;
+	right:20px;
+	width:200px;
+	border: 1px solid #464646;
+	background: #0d0d0d;
+	text-align: center;
+	padding-top: 5px;
+	font: bold 1em Verdana, Geneva, sans-serif;
+}
+
+#contact a{
+	text-decoration:none;	
+	color:#939393;
+}
+
+#logo{
+	position:absolute;
+	bottom:25px;
+	right:20px;
+	width:200px;
+	height:150px;
+	border: 1px solid #464646;
+	background: #0d0d0d;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1 #logo-top{
+	text-align:center;
+	font: bold 2em Georgia, serif;
+}
+
+h1 #logo-bottom{	
+	position:relative;
+	top:-5px;
+	border-top:1px solid #939393;
+	padding-top:2px;
+	width:65%;
+	margin-left:18%;
+	text-align:center;
+	font: bold 0.5em Verdana, Geneva, sans-serif;
+	letter-spacing:1px;
+}
+
+#spinner{
+	position:absolute;
+	left:40%;
+	top:40%;
+}
+
+.hidden{
+	display:none;
 }

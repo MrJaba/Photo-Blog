@@ -10,7 +10,6 @@ rescue LoadError
   require 'rubygems'
   require 'bundler'
   Bundler.setup
-  require 'mongoid'
 end
 
 Bundler.require(:default, PADRINO_ENV.to_sym)

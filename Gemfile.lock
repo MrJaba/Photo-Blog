@@ -1,11 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    aaronh-chronic (0.3.9)
+    activemodel (3.0.3)
+      activesupport (= 3.0.3)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
     activesupport (3.0.3)
     bson (1.1.2)
     bson_ext (1.1.2)
+    builder (2.1.2)
     daemons (1.1.0)
-    durran-validatable (2.0.1)
     eventmachine (0.12.10)
     flickraw (0.8.3)
       json (>= 1.1.1)
@@ -16,7 +21,6 @@ GEM
       url_mount (~> 0.2.1)
     i18n (0.4.2)
     json (1.4.6)
-    leshill-will_paginate (2.3.11)
     mail (2.2.10)
       activesupport (>= 2.3.6)
       i18n (~> 0.4.1)
@@ -25,11 +29,11 @@ GEM
     mime-types (1.16)
     mongo (1.1.2)
       bson (>= 1.1.1)
-    mongoid (1.0.6)
-      activesupport (>= 2.2.2)
-      durran-validatable (>= 2.0.1)
-      leshill-will_paginate (>= 2.3.11)
-      mongo (>= 0.18.2)
+    mongoid (2.0.0.beta.20)
+      activemodel (~> 3.0)
+      mongo (~> 1.1)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
     padrino (0.9.19)
       padrino-admin (= 0.9.19)
       padrino-core (= 0.9.19)
@@ -74,6 +78,10 @@ GEM
     tzinfo (0.3.23)
     url_mount (0.2.1)
       rack
+    whenever (0.6.2)
+      aaronh-chronic (>= 0.3.9)
+      activesupport (>= 2.3.4)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -83,8 +91,9 @@ DEPENDENCIES
   flickraw
   haml
   mongo
-  mongoid
+  mongoid (= 2.0.0.beta.20)
   padrino (= 0.9.19)
   rack-flash
   rake
   thin
+  whenever
