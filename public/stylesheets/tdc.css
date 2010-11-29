@@ -13,7 +13,7 @@ body{
 div#sash{
 	position:absolute;
 	bottom:8%;
-	height:80px;
+	height:81px;
 	width:90%;
 	border-top: 1px solid #464646;
 	border-bottom: 1px solid #464646;
@@ -27,8 +27,7 @@ div#sash{
 }
 
 a img.thumbnail{
-	border:0;
-	
+	border:0;	
 }
 
 #flourish{
@@ -69,15 +68,19 @@ a img.thumbnail{
 }
 
 h1 #logo-top{
+	text-transform:uppercase;
 	text-align:center;
-	font: bold 2em Georgia, serif;
+	font: bold 1.1em Georgia, serif;
+	padding-top:18px;
+	padding-bottom:2px;
+	letter-spacing:1px;
 }
 
 h1 #logo-bottom{	
 	position:relative;
 	top:-5px;
 	border-top:1px solid #939393;
-	padding-top:2px;
+	padding-top:1px;
 	width:65%;
 	margin-left:18%;
 	text-align:center;
