@@ -26,6 +26,11 @@ div#sash{
 	margin-top:3px;
 }
 
+a img.thumbnail{
+	border:0;
+	
+}
+
 #flourish{
 	position:absolute;
 	bottom:240px;
