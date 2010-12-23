@@ -1,12 +1,18 @@
 <div id="sash">
-	<% @photos.each do | photo | %>
-		<%= link_to(image_tag( photo.thumbnail, :class => "thumbnail" ), "#") %>
-	<% end %>
+	<%= image_tag( "arrow_left.png", :id => "arrow_left" )%>
+	<div id="images">
+		<% @photos.each do | photo | %>
+			<%= link_to(image_tag( photo.thumbnail, :class => "thumbnail" ), "#") %>
+		<% end %>
+	</div>	
 </div>
+<%= image_tag( "arrow_right.png", :id => "arrow_right" ) %>
 
 <%= image_tag( image_path("flourish.png"), :id => "flourish" ) %>
 
-<h2 id="contact"><a href="mailto:the.jaba@gmail.com">Contact</a></h2>
+<h2 id="contact">
+	<a href="mailto:the.jaba@gmail.com">Contact</a>
+</h2>
 
 <div id="logo">
 	<h1>

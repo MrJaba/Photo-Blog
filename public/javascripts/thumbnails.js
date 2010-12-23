@@ -2,7 +2,7 @@
 var TDC = window.TDC || {};
 
 TDC.Thumbnails = {
-	
+		
 	addOnClicks: function(){
 		$(".thumbnail").each( function( index ){
 			$(this).click( function(event){
@@ -24,12 +24,37 @@ TDC.Thumbnails = {
 				});
 			})			
 		})
-	}
+	},
 	
+	addHoverScroll:function(){
+		var stopAnimation = function(){$("#images img").stop(true)};
+		var imageOverflow = ($(document).width()*0.75) - ($("#images img").length * $("#images img").first().width());
+		var scrollLeft = function(){ 
+			if( parseInt($("#images img").css("left")) >= imageOverflow){
+				$("#images img").animate({left:'-=70'}, null, 'swing', scrollLeft) 
+			}else{
+				stopAnimation();
+			}
+		};
+		var scrollRight = function(){ 
+			if( parseInt($("#images img").css("left")) <= 0 ){
+				$("#images img").animate({left:'+=70'}, null, 'swing', scrollRight) 
+			}else{
+				stopAnimation();
+			}
+		};
+		$("#arrow_left").hover(
+			function(event){ scrollLeft() }, 
+			function(event){ $("#images img").stop(true) } );
+		$("#arrow_right").hover(
+			function(event){ scrollRight() }, 
+			function(event){ $("#images img").stop(true) } );
+	}	
 }
 
 //add onclick events
 $( TDC.Thumbnails.addOnClicks );
+$( TDC.Thumbnails.addHoverScroll );
 
 
 

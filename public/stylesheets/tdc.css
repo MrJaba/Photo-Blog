@@ -12,17 +12,38 @@ body{
 
 div#sash{
 	position:absolute;
-	bottom:8%;
-	height:81px;
-	width:90%;
+	bottom:60px;
+	height:82px;
 	border-top: 1px solid #464646;
 	border-bottom: 1px solid #464646;
 	background: black;	
-	padding-left:2px;
+	padding-left:40px;
+	width:90%;
+}
+
+div#images{
+	width:100%;
+	height:82px;
 	overflow:hidden;
+	white-space:nowrap;
+}
+
+#arrow_left{
+	position:absolute;
+	display:inline;
+	left:0px;
+	z-index:10;
+}
+
+#arrow_right{
+	position:absolute;
+	bottom:62px;
+	right:222px;
+	z-index:10;
 }
 
 .thumbnail{
+	position:relative;
 	margin-top:3px;
 }
 
@@ -97,3 +118,12 @@ h1 #logo-bottom{
 .hidden{
 	display:none;
 }
+
+#copyright{
+	position:absolute;
+	bottom:4px;
+	right:50px;
+	color:#939393;
+	font-size:0.8em;
+}
+
