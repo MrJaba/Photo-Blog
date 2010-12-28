@@ -27,17 +27,16 @@ TDC.Thumbnails = {
 	},
 	
 	addHoverScroll:function(){
-		var stopAnimation = function(){$("#images img").stop(true)};
-		var imageOverflow = ($(document).width()*0.75) - ($("#images img").length * $("#images img").first().width());
+		var stopAnimation = function(){$("#images img").stop(true)}; 
 		var scrollLeft = function(){ 
-			if( parseInt($("#images img").css("left")) >= imageOverflow){
+			if( $("#last").position().left > ($("#arrow_right").position().left -70)){
 				$("#images img").animate({left:'-=70'}, null, 'swing', scrollLeft) 
 			}else{
 				stopAnimation();
 			}
 		};
-		var scrollRight = function(){ 
-			if( parseInt($("#images img").css("left")) <= 0 ){
+		var scrollRight = function(){
+			if( $("#first").position().left < 70 ){
 				$("#images img").animate({left:'+=70'}, null, 'swing', scrollRight) 
 			}else{
 				stopAnimation();

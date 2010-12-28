@@ -1,8 +1,8 @@
 <div id="sash">
 	<%= image_tag( "arrow_left.png", :id => "arrow_left" )%>
 	<div id="images">
-		<% @photos.each do | photo | %>
-			<%= link_to(image_tag( photo.thumbnail, :class => "thumbnail" ), "#") %>
+		<% @photos.each_with_index do | photo, index | %>
+			<%= link_to(image_tag( photo.thumbnail, :class => "thumbnail", :id => photo_position_id(index)), "#") %>
 		<% end %>
 	</div>	
 </div>
